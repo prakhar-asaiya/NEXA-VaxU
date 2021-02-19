@@ -15,14 +15,14 @@ Here is **Team NEXA** with -
 
 *A complete solution with a personalised app and admin portal, with a special cough based covid testing module, social distancing monitor and KYC verification model, which will make the process convenient, effective and hassle free.*
 
-### **Features of VaxU** - *Machine Learning Models*
-1. Model A
+### **Features of VaxU** - *Artificial Intelligence & Machine Learning Models*
+1. ML - Covid Cough Detection
     - hello
     - hi
-2. Model B
+2. AI - Adhaar Card Details Validation
     - hello
     - hi
-3. Model C
+3. AI - Face Recognition
     - hello
     - hi
 
@@ -39,9 +39,11 @@ Here is **Team NEXA** with -
     - Proper Authenticated system
     - Two different profiles for patients and authenticated officials are present
     - Time slots are assigned to every patient according to availability, locality and age i.e. people at high risk are given priority.
-    - 
 
 ### **Features of VaxU** - *Mobile Application*
+- 
+-
+-
 
 ### **Tech Stack Used:**
 1. Machine Learning:
