@@ -41,9 +41,12 @@ Here is **Team NEXA** with -
     - Time slots are assigned to every patient according to availability, locality and age i.e. people at high risk are given priority.
 
 ### **Features of VaxU** - *Mobile Application*
-- 
--
--
+- Statistics of total cases, death, recovery etc. can be viewed at the **Home Screen**
+- Local Information related to Covid19 can be viewed at the **City** tab
+- Nearby Hospitals can be viewed depending upon the locality and distance in the **Hospitals** tab
+- The patient can submit their *Voice Recording* for our ML model to diagnose if they are suffering from COVID19 or not under the **Check** tab
+- Under the **Profile** tab, user can check their personal details, apply for vaccination, ask for helps and logout of the application.
+- User can apply for vaccination by filling up the KYC form attaching their own selfies and picture of their Aadhar Card.
 
 ### **Tech Stack Used:**
 1. Machine Learning:
@@ -71,6 +74,7 @@ Here is **Team NEXA** with -
 - Scalability:
 
     This project can be extended to facilitate vaccinations for any other future pandemics or diseases.
+
 ## Team Members - Domains
 All the team members are from National Institute of Technology pursuing Computer Science and Engineering in the 2nd Year.
 1. Amitesh Aggrawal - Machine Learning
