@@ -36,13 +36,16 @@ Here is **Team NEXA** with -
     - The officials can monitor the vaccination process through the user friendly UI.
     - The Web Application provides **Crowd Management** feature through time sorted vaccination for the patients i.e. Every patient is alloted specific time slot so as to prevent crowd formation.
 2. BackEnd :
+    - Proper Authenticated system
+    - Two different profiles for patients and authenticated officials are present
+    - Time slots are assigned to every patient according to availability, locality and age i.e. people at high risk are given priority.
     - 
 
 ### **Features of VaxU** - *Mobile Application*
 
 ### **Tech Stack Used:**
 1. Machine Learning:
-    -
+    - 
 2. Web - Frontend:
     - HTML
     - CSS
@@ -50,8 +53,14 @@ Here is **Team NEXA** with -
     - JavaScript
     - AOS Library
 3. Web - Backend:
-    -
-    -
+    - Django
+    - Microsoft Azure Server
+    - Celery Beat
+4. Mobile Application:
+5. Tools:
+    - Git
+    - GitHub Students Pack
+
 
 ### Business Model / StartUp Potential
 - Premium Support:
