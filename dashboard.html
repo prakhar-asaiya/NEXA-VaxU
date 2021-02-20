@@ -31,7 +31,7 @@
       var exists = localStorage.length;
       if (!exists) {
         alert("You need to login first!");
-        var host = "https://Hard-Coder05.github.io/NEXA-VaxU";
+        var host = "Hard-Coder05.github.io/NEXA-VaxU";
         window.location.href = "http://" + host;
       }
     </script>
@@ -361,7 +361,7 @@
       });
 
       var userList;
-      var host = "https://Hard-Coder05.github.io/NEXA-VaxU;
+      var host = "Hard-Coder05.github.io/NEXA-VaxU";
       console.log(typeof document.cookie);
       var name = getCookie("username");
       console.log(name);
@@ -467,7 +467,7 @@
                 x = "";
               userList = JSON.parse(response);
               for (i = 0; i < userList.length; i++) {
-                var time = ts[0][userList[i].timeslot];
+                var time = ts[userList[i].timeslot];
 
                 x +=
                   "<tr><td>" +
