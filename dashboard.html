@@ -31,7 +31,7 @@
       var exists = localStorage.length;
       if (!exists) {
         alert("You need to login first!");
-        var host = "Hard-Coder05.github.io/NEXA-VaxU";
+        var host = "http://127.0.0.1:8080";
         window.location.href = "http://" + host;
       }
     </script>
@@ -361,7 +361,7 @@
       });
 
       var userList;
-      var host = "Hard-Coder05.github.io/NEXA-VaxU";
+      var host = "http://127.0.0.1:8080;
       console.log(typeof document.cookie);
       var name = getCookie("username");
       console.log(name);
@@ -517,10 +517,16 @@
         })
           .then((response) => response.json())
           .then((json) => {
-            toastr.info(json);
+            var ans = json.message;
+            if(ans){
+                toastr.info("Face matched");
+            }
+            else{
+                toastr.error("Unable to match face")
+            }
           })
           .catch((error) => {
-            toastr.error(error);
+            toastr.error("Face not found");
           });
       };
 
@@ -555,10 +561,15 @@
               .then((response) => response.json())
               .then((json) => {
                 console.log(json);
-                toastr.info(json);
+                if(json.message == true){
+                    toastr.success("Face matched");
+                }
+                else{
+                    toastr.error("Unable to match face");
+                }
               })
               .catch((error) => {
-                toastr.error(error);
+                toastr.error("Face not detected");
               });
           } else {
             toastr.error("User List is empty");
