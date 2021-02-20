@@ -31,7 +31,7 @@
       var exists = localStorage.length;
       if (!exists) {
         alert("You need to login first!");
-        var host = "http://127.0.0.1:8080";
+        var host = "https://Hard-Coder05.github.io/NEXA-VaxU";
         window.location.href = "http://" + host;
       }
     </script>
@@ -316,18 +316,18 @@
       toasterOptions();
       const ts = [
         {
-          1: "9AM - 10AM",
-          2: "10AM - 11AM",
-          3: "11AM - 12PM",
-          4: "12PM - 1PM",
-          5: "1PM - 2PM",
-          6: "2PM - 3PM",
-          7: "3PM - 4PM",
-          8: "4PM - 5PM",
-          9: "5PM - 6PM",
-          10: "6PM - 7PM",
-          11: "7PM - 8PM",
-          12: "8PM - 9PM",
+          "1": "9AM - 10AM",
+          "2": "10AM - 11AM",
+          "3": "11AM - 12PM",
+          "4": "12PM - 1PM",
+          "5": "1PM - 2PM",
+          "6": "2PM - 3PM",
+          "7": "3PM - 4PM",
+          "8": "4PM - 5PM",
+          "9": "5PM - 6PM",
+          "10": "6PM - 7PM",
+          "11": "7PM - 8PM",
+          "12": "8PM - 9PM",
         },
       ];
 
@@ -361,7 +361,7 @@
       });
 
       var userList;
-      var host = "http://127.0.0.1:8080;
+      var host = "https://Hard-Coder05.github.io/NEXA-VaxU;
       console.log(typeof document.cookie);
       var name = getCookie("username");
       console.log(name);
@@ -420,13 +420,6 @@
           .getImageData(0, 0, canvas.width, canvas.height)
           .data.some((channel) => channel !== 0);
       }
-      console.log(isCanvasBlank(canvasElement));
-      /*
-                  function download() {
-                  var dt = canvas.toDataURL('image/png');
-                  this.href = dt;
-              };
-                  downloadLnk.addEventListener('click', download, false);*/
 
       $(document).ready(function () {
         function getvalues() {
@@ -494,8 +487,6 @@
         loadUsers();
       });
 
-      // function submitDetails(){
-
       var urlToHit =
         "https://cors-anywhere.herokuapp.com/http://20.198.3.123:80/api/core/check/";
 
@@ -529,10 +520,6 @@
             toastr.error("Face not found");
           });
       };
-
-      /*document.querySelector('#fileUpload').addEventListener('click', event => {
-                handleImageUpload(event)
-              });*/
 
       console.log("submit started");
 
@@ -599,91 +586,14 @@
           .catch((error) => {
             toastr.error("User does not exists or already vaccinated!");
           });
-        /*  $.ajax({
-                          type: "GET",
-                          url: host,
-                          headers: {
-                              'Authorization': token
-                          },
-                          success: function(res){
-                              toastr.success(res);
-                          },
-                          error: function(error){
-                              toastr.error(error);
-                              console.log(error);
-                          }
-                      });*/
         loadUsers();
       }
 
-      /*  var dataURL = canvasElement.toDataURL();
-                  console.log(dataURL);
-                  const fd = new FormData();
-                  var blobBin = atob(dataURL.split(',')[1]);
-                  var array = [];
-                  for(var i = 0; i < blobBin.length; i++) {
-                      array.push(blobBin.charCodeAt(i));
-                  }
-                  var file = new Blob([new Uint8Array(array)], {type: 'image/png'});
-                  console.log(file);
-                  var id = userList[0].patient_id;
-
-                  fd.append("clicked_photo", file);
-                  fd.append("patient_id", id);
-                  $.ajax({
-                     url: host,
-                     type: "POST",
-                     data: fd,
-                     processData: false,
-                     contentType: false,
-                  }).done(function(respond){
-                    alert(respond);
-                  });*/
-
-      /*fd.append('clicked_photo', dataURL);
-                  var id = userList[0].patient_id;
-                  console.log(id);
-                  console.log(userList);
-                  fd.append('patient_id', id);
-                  console.log(fd);
-                  var token = localStorage.getItem(name);
-                  fetch(urlToHit, {
-                          method: 'POST',
-                          headers: {
-                              //'Content-type': 'application/json',
-                              'Authorization' : token
-                          }
-                          body: fd
-                      })
-                  .then(res => res.json())
-                  .then(json => console.log(json))
-                  .catch(err => toastr.error(err));*/
-      //               console.log('submit started');
-      //                var urlToHit = "http://20.198.3.123:80/api/core/check";
-      //                //var canvas = document.getElementById('canvas');
-      //                if(!isCanvasBlank(canvasElement))
-      //                    {
-      //                    let blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-      //                      let response = await fetch(urlToHit, {
-      //                        method: 'POST',
-      //                        body: blob
-      //                      });
-      //
-      //                      // the server responds with confirmation and the image size
-      //                      let result = await response.json();
-      //                      alert(result.message);
-      //                    }
-      //                else{
-      //                    console.log('trying toastr');
-      //                    toastr.error('Please click an image first!');
-      //                }
-      //}
       function logout() {
         console.log(name);
         localStorage.removeItem(name);
         window.location = "http://" + host + "/";
       }
     </script>
-    <!--    <script language="JavaScript" type="text/javascript" src="styles/app.js"></script>-->
   </body>
 </html>
