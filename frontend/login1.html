@@ -73,16 +73,17 @@
       </div>
     </footer>
     <script>
-      var host = "Hard-Coder05.github.io/NEXA-VaxU";
+      var host = "localhost:5501";
       function trylogin() {
         var _token;
         var userName = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         var urlToHit =
-          "https://cors-anywhere.herokuapp.com/http://20.198.3.123:80/api/users/vacc/login/";
-        var request = new XMLHttpRequest();
+          "http://cors-anywhere.herokuapp.com/http://52.188.174.118/api/users/vacc/login/";
+        
 
         function getToken(urlToHit, email, password) {
+          var request = new XMLHttpRequest();
           var key;
           request.open("POST", urlToHit, true);
           request.setRequestHeader("Content-type", "application/json");
@@ -113,7 +114,7 @@
         //curr_url = location.href;
         var name = "username=" + userName;
         document.cookie = name;
-        location.href = "https://" + host + "/dashboard.html";
+        location.href = "http://" + host + "/dashboard.html";
       }
     </script>
   </body>

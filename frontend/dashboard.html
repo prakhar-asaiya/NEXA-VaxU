@@ -31,7 +31,7 @@
       var exists = localStorage.length;
       if (!exists) {
         alert("You need to login first!");
-        var host = "Hard-Coder05.github.io/NEXA-VaxU";
+        var host = "localhost:5500";
         window.location.href = "http://" + host;
       }
     </script>
@@ -361,7 +361,7 @@
       });
 
       var userList;
-      var host = "Hard-Coder05.github.io/NEXA-VaxU";
+      var host = "localhost:5501";
       console.log(typeof document.cookie);
       var name = getCookie("username");
       console.log(name);
@@ -424,7 +424,7 @@
       $(document).ready(function () {
         function getvalues() {
           var urlToHit =
-            "https://cors-anywhere.herokuapp.com/http://20.198.3.123/api/core/";
+            "http://52.188.174.118/api/core/";
           var request = new XMLHttpRequest();
           var token = localStorage.getItem(name);
           console.log(token);
@@ -444,7 +444,7 @@
                 obj.vaccines_available;
               document.getElementById("priceOfVaccine").innerHTML = obj.price;
               document.getElementById("availabilityStatus").innerHTML =
-                obj.is_available;
+                (obj.is_available ? "Available" : "Not Available");
             }
           };
           request.send();
@@ -453,7 +453,7 @@
 
         function loadUsers() {
           var urlToHit =
-            "https://cors-anywhere.herokuapp.com/http://20.198.3.123/api/core/list/";
+            "http://52.188.174.118/api/users/login/";
           var request = new XMLHttpRequest();
           var token = localStorage.getItem(name);
           request.open("GET", urlToHit, true);
@@ -488,7 +488,7 @@
       });
 
       var urlToHit =
-        "https://cors-anywhere.herokuapp.com/http://20.198.3.123:80/api/core/check/";
+        "http://52.188.174.118/api/users/login/";
 
       const handleImageUpload = (event) => {
         const files = event.target.files;
@@ -566,7 +566,7 @@
 
       function isVaccinated() {
         var host =
-          "https://cors-anywhere.herokuapp.com/http://20.198.3.123/api/core/vaccinated/";
+          "http://52.188.174.118/api/users/login/";
         var id = $("textarea").val();
         console.log(userList);
         console.log({ id });
